@@ -10,7 +10,7 @@ import { Motion, spring } from "react-motion";
 async function onclick(geo) {
     console.log(geo);
     try {
-      const response = await fetch(`https://data.nasa.gov/resource/gh4g-9sfh.json`)
+      const response = await fetch(`https://data.nasa.gov/resource/gh4g-9sfh.json?$limit=46000`)
       const data = await response.json()
       console.log(data)
     let meteorstrikes = data.length;
